@@ -1,0 +1,10 @@
+#!/bin/bash
+#this reruns from Testing Raw Files
+
+mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml
+result=1
+while [ $result -ne 0 ]; do
+    mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml --partial-processing=5
+    result=$?
+done
+

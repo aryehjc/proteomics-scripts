@@ -1,0 +1,8 @@
+#!/bin/bash
+#this reruns from beginning if it crashes
+
+result=1
+while [ $result -ne 0 ]; do
+    mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml
+    result=$?
+done

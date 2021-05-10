@@ -1,0 +1,10 @@
+#!/bin/bash
+#this reruns from Calculating Peak Properties
+
+mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml
+result=1
+while [ $result -ne 0 ]; do
+    mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml --partial-processing=10
+    result=$?
+done
+

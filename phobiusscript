@@ -1,0 +1,5 @@
+#!/bin/bash
+#Runs Phobius program 20 times in parallel to produce text file that can be converted to Excel format. Phobius outputs text file with headers giving number and location of membrane proteins in bacterial genome FASTA data as well as any signal peptides present.
+
+
+printf '%s\0' *.faa | xargs -r -0 -P 20 -n 1 phobius.pl --short > outputfile.txt 
