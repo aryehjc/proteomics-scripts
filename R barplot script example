@@ -1,0 +1,61 @@
+#Create the data for the chart. H y-axis, M x-axis. This is a bar graph that shows which step various mqpar.xml files crash at in MaxQuant, from steps 1-41.
+
+H <- c(13,11,14,41,41,41,41,8,8,8,13)
+
+M <- c(1,2,3,4,5,6,7,8,9,10,11)
+
+
+
+# Give the chart file a name
+
+png(file
+= "Crash steps of mqpar files.png")
+
+
+
+# Plot the bar chart 
+
+barplot(H,names.arg=M,xlab="MQPARFILE",ylab="CRASH
+STEP",col="green",
+ylim=c(0,50),
+
+main="MaxQuant
+Crash Steps",border="blue")
+
+
+
+text(0.7,16,"13",
+col="red")
+
+text(1.9,13,"11",
+col="red")
+
+text(3.1,16,"14",
+col="red")
+
+text(4.3,44,"41", col="red")
+
+text(5.5,44,"41",
+col="red")
+
+text(6.7,44,"41",
+col="red")
+
+text(7.9,44,"41",
+col="red")
+
+text(9.1,11,"8",
+col="red")
+
+text(10.3,11,"8", col="red")
+
+text(11.5,11,"8",
+col="red")
+
+text(12.7,16,"13", col="red")
+
+
+
+
+#Text(x,y,“red label”). Can modify labels and y-axis H values for own use, run with Rscript / Rstudio.                                                     
+e.g. Rscript barplot.R
