@@ -11,7 +11,8 @@
 # Without the ?, the .* acts as a flag to include all characters before last W.
 # s changes dot metacharacter so it matches ANY character at all.
 # g is for GLOBAL matches that match ALL occurences of the pattern within the string.
-# check output then do ./CDR1finder > combined.faa to combine all fastas together again with the CDR sequence    
+# check output then do ./CDR1finder > combined.faa to combine all fastas together again with the CDR sequence 
+# After strings are printed, type ./lightchainCDR1finder > CDR1s.faa to output the Complementary Determining Region 1s into a FASTA file.
   for file in /LCALL/*; 
     do
     perl -l -ne 'print $1 if /C(.*?)W/sg' *.faa
