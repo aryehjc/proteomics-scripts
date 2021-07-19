@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+# Assigns start and endpoint range for CDR1s in Heavy Chain Sequences according to Kabat and Chothia rules for antibody numbering, and trims the first 3 characters to find CDR1s in Heavy Chains.
+# Please note there are outliers, sometimes match between first C and first W is short number of characters, therefore
+# if output of CDR1s.faa has strings that are 3 to 4 sequences
+# amend as follows. Download GNU Parallel, then
+#perl -ne (single apostrophe)print unless length > 4;(single apostrophe) cutthesestrings.faa will check for any bad strings that stopped at first W but not 4 after C.
+#For example, this obtained KL AND SS in my dataset.
+#find . -type f | parallel -k -j150% -n 1000 -m grep --color=always -H -n STRING {}
+#search each string above in between C and W, eg STRING = C(charactersinbadstring)W
+#then for the file i find...
+#and just manually find the sequence by eye, will be indicated at start so can be found quickly.
+# eg. YTFTDYGMN in 1ghf_H|Heavy|H.faa
+# 1mj7_H|Heavy|H.faa has INWVKQRPGQGLE
+
+  for file in /HCALL/*; 
+    do
+    perl -l -ne 'print $1 if /C(.*?)W/sg' *.faa > cutthesestrings.faa
+    done
+
+    grep -Po '^.{3}\K.*' cutthesestrings.faa > CDR1s.faa

@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+# Assigns start and endpoint range for CDR3s in Heavy Chain Sequences according to Kabat and Chothia rules for antibody numbering
+# Identifies outliers that were not detected by heavychainCDR3finder2 by redefining range in between Cys-Ala-Ala and Trp-Gly
+    for file in /HCALL/*;
+    do
+    perl -l -ne 'print $1 if /W(....................................................................................................................................)/sg' *.faa > cutCDR3three.faa
+    done
+    perl -l -ne 'print $1 if /CAA(.*?)WG/sg' cutCDR3three.faa > cutCDR3againthree.faa
+    grep -Po '^.{2}\K.*' cutCDR3againthree.faa > CDR3sthree.faa
+
+    
