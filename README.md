@@ -13,3 +13,6 @@ MassRecalibration, CalculatePeakProperties and TestRawFiles - starts MaxQuant fr
 mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml --partial-processing=5 for Testing Raw Files step, 
 mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml --partial-processing=10 for Calculating Peak Properties step, 
 mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml --partial-processing=14 for Mass Recalibration step.
+
+
+R barplot example: Produces a bar graph in R.
