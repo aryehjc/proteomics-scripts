@@ -6,6 +6,8 @@ Please note that Light Chain CDR3 finder and Heavy Chain CDR3 finder are both on
 
 Please note that within the above scripts, LCALL and HCALL refers to the directories I am working in, please change this into the appropriate directory name you are working with antibody FASTA sequences in. E.g. Directory LCALL in the script is called by ' for file in /LCALL/* ' and directory A becomes 'for file in /A/*'
 
+Please note that for maximum accuracy with the CDR3 finder for Heavy Chain sequences, run heavychainCDR3finder1, heavychainCDR3finder2, and heavychainCDR3finder3 in order.
+
 phobiusscript: Runs Phobius program 20 times in parallel to produce text file that can be converted to Excel format. Phobius outputs text file with headers giving number and location of membrane proteins in bacterial genome FASTA data as well as any signal peptides present.
 
 MaxQuantbash: restarts MaxQuant proteomics program immediately after crashing. 
