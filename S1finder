@@ -1,0 +1,20 @@
+#!/bin/bash
+# Finds S1 regions between 14-685 residues as given in https://www.nature.com/articles/s41401-020-0485-4 
+# Gets 1-685 range then cuts the 13 first residues to get the 14-685 range.
+# -0 counts as an interpreter to interpret numbers from 0-7 (octal) and 3 following octal digits after the 0. Normally used in line scripts, adding -0(000) is for paragraph modes.
+# -l outputs on newline,
+# -n reads the input line by line, 
+# -e indicates the code itself follows after e,
+# $ matches end of string.
+# MFV for start of range,
+# (...) is to match up to 685 char, and this includes the start point of S1 region at 14. I took 137 as prime factor of 685 and then just put in 137 dots multiplied by 5 in the range. 
+# Without the ?, the .* acts as a flag to include all characters before last defined char.
+# s changes dot metacharacter so it matches ANY character at all.
+# g is for GLOBAL matches that match ALL occurences of the pattern within the string.
+# check output then do ./CDR1finder > combined.faa to combine all fastas together again with the CDR sequence    
+  for file in /S1finders/*; 
+    do
+    perl -l -ne 'print $1 if /(.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................)/sg' *.faa > cutthissequence.faa
+    done
+
+     grep -Po '^.{13}\K.*' cutthissequence.faa > S1s.faa
