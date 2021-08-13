@@ -1,11 +1,12 @@
 #!/bin/bash
-# Finds RBD regions between 319-541 residues as given in https://www.nature.com/articles/s41401-020-0485-4 
+# Used in accompaniment with S1finder.
+# Finds RBD regions between 319-541 residues as given in https://www.nature.com/articles/s41401-020-0485-4, given an input of spikeglycoproteins as FASTAs. 
 
 
- grep -Po '^.{318}\K.*' S1s.faa > cuttheseS1sagain.faa
+ grep -Po '^.{318}\K.*' Spikeproteins.faa > cuttheseagain.faa
 # cuts from behind to start at the defined RBD range
 
- sed -e 's/^\(.\{223\}\).*/\1/' cuttheseS1sagain.faa > RBDs.faa
+ sed -e 's/^\(.\{223\}\).*/\1/' cuttheseagain.faa > RBDs.faa
 # cuts from front to end at character 541 in the defined RBD range. 
 
 
