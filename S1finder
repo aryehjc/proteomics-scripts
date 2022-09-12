@@ -1,5 +1,5 @@
 #!/bin/bash
-# Finds S1 regions between 14-685 residues as given in https://www.nature.com/articles/s41401-020-0485-4 
+# Finds S1 regions between 14-685 residues as given in https://www.nature.com/articles/s41401-020-0485-4. Updated Sep 12 2022
 # Gets 1-685 range then cuts the 13 first residues to get the 14-685 range.
 # -0 counts as an interpreter to interpret numbers from 0-7 (octal) and 3 following octal digits after the 0. Normally used in line scripts, adding -0(000) is for paragraph modes.
 # -l outputs on newline,
