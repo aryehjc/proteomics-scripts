@@ -59,3 +59,4 @@ text(12.7,16,"13", col="red")
 
 #Text(x,y,“red label”). Can modify labels and y-axis H values for own use, run with Rscript / Rstudio.                                                     
 e.g. Rscript barplot.R
+Updated Sep 12 2022
