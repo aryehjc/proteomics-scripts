@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Updated Sep 12 2022
 # Assigns start and endpoint range for CDR3s in Heavy Chain Sequences according to Kabat and Chothia rules for antibody numbering, to find CDR3s in Heavy Chain Sequences.
 # Note perl -ne 'print unless length > 3;' CDR3s.faa gives some inaccurate sequences, this is amended by the method given in lightchainCDR3finder with GNU Parallel.
 # Furthermore, heavychainCDR3finders 2 and 3 account for these inaccurate sequences by redefining the search range. 
