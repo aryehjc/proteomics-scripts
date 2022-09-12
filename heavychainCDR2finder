@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Updated Sep 12 2022
 # Assigns start and endpoint range for CDR2s in Heavy Chain Sequences according to Kabat and Chothia rules for antibody numbering
 # to find CDR2s in Heavy Chain Sequences. 
 #Since there is greater variance, Gives APPROXIMATE region based on average of AbM And Chothia minimum and maximum lengths. 
