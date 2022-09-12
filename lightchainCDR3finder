@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Updated Sep 12 2022
 # Assigns start and endpoint range for CDR3s in Light Chain Sequences, and trims the final 7-11 characters to obtain the CDR3 between C always and between first FG occurence
 # According to kabat and Chothia antibody numbering rules.
 # Note that I obtained outliers in my data, which are sequence strings less than 7 residues, let this be x. This can be checked with following Perl command;
