@@ -1,5 +1,5 @@
 #!/bin/bash
-# Used in accompaniment with S1finder.
+# Used in accompaniment with S1finder. Updated Sep 12 2022
 # Finds RBD regions between 319-541 residues as given in https://www.nature.com/articles/s41401-020-0485-4, given an input of spikeglycoproteins as FASTAs. 
 
 
