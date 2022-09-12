@@ -1,5 +1,5 @@
 #!/bin/bash
-#this reruns from MassRecalibration
+#this reruns from MassRecalibration. Updated Sep 12 2022
 
 mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml
 result=1
