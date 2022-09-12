@@ -1,5 +1,5 @@
 #!/bin/bash
-#this reruns from beginning if it crashes
+#this reruns from beginning if it crashes. Updated Sep 12 2022
 
 result=1
 while [ $result -ne 0 ]; do
