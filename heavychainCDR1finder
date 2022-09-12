@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Updated Sep 12 2022
 # Assigns start and endpoint range for CDR1s in Heavy Chain Sequences according to Kabat and Chothia rules for antibody numbering, and trims the first 3 characters to find CDR1s in Heavy Chains.
 # Please note there are outliers, sometimes match between first C and first W is short number of characters, therefore
 # if output of CDR1s.faa has strings that are 3 to 4 sequences
