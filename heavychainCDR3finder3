@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Updated Sep 12 2022
 # Assigns start and endpoint range for CDR3s in Heavy Chain Sequences according to Kabat and Chothia rules for antibody numbering
 # Identifies outliers that were not detected by heavychainCDR3finder2 by redefining range in between Cys-Ala-Ala and Trp-Gly
     for file in /HCALL/*;
