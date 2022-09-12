@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 # Assigns start and endpoint range for CDR2s in Light Chain Sequences, and trims the final 7 characters to obtain the CDR2, according to defined range for Kabat and Chothia rules in antibody numbering.
+# Updated Sep 12 2022
 
   for file in /LCALL/*; 
     do
