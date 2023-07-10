@@ -24,6 +24,7 @@ for filename in os.listdir(directory):
 
 
 # This BioPython script I wrote extracts solvent accessibility readings from PDB files. On a set of 200,000 PDB files it takes 2 weeks to complete. Will further optimise the program for future use.
+# Prints to terminal by default - pipe to a text file with " ./ExtractASAFromPDBs.py > ExtractedASAS.txt "
 
 # Sample output:
 
