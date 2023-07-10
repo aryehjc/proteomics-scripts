@@ -25,7 +25,7 @@ for filename in os.listdir(directory):
 
 # This BioPython script I wrote extracts solvent accessibility readings from PDB files. On a set of 200,000 PDB files it takes 2 weeks to complete. Will further optimise the program for future use.
 
-# Sample output (SEE 'ExtractedDSSPData' file.):
+# Sample output:
 
 #(1, 'A', '-', 1.0, -105.5, -32.5, 0, 0.0, 4, -1.9, 0, 0.0, 5, -0.1)
 #(2, 'E', 'H', 0.5257731958762887, -68.2, -41.3, 2, -0.2, 4, -1.5, 1, -0.2, 5, -0.1)
