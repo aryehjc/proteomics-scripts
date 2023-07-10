@@ -38,3 +38,4 @@ for filename in os.listdir(directory):
 #(9, 'E', 'H', 0.29896907216494845, -68.2, -38.0, -4, -1.9, 4, -2.1, 1, -0.2, -1, -0.2)
 #(10, 'Q', 'H', 0.08585858585858586, -64.9, -33.4, -4, -2.5, 4, -2.5, 1, -0.2, -1, -0.2)
 #...
+# Where 4th value in List is the Relative ASA value according to DSSP.
