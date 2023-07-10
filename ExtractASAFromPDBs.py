@@ -16,7 +16,7 @@ for filename in os.listdir(directory):
     	# calculate DSSP
 		dssp = DSSP(model, filename, file_type='PDB')
 	except Exception:
-		pass
+		pass # Many PDB files are by default incomplete or have indexing errors. This enables the program to continue 
     	# extract all DSSP information
 		for z in range(len(dssp)):
 			a_key = list(dssp.keys())[z]
