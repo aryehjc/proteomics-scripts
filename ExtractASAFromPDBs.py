@@ -6,14 +6,14 @@ import os
 
 directory = '/home/aryeh/pdb/unzipped'
 
-# parse structure, insert required pdb file here
+# Parse PDB File
 p = PDBParser()
 for filename in os.listdir(directory):
 	try:
 		structure = p.get_structure("file", filename) 	
-    	# use only the first model
+    	# Default DSSP running settings for PDB 
 		model = structure[0]
-    	# calculate DSSP
+    	# Loop and calculate DSSP from each PDB file in directory
 		dssp = DSSP(model, filename, file_type='PDB')
 	except Exception:
 		pass # Many PDB files are by default incomplete or have indexing errors. This enables the program to continue 
