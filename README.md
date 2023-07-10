@@ -23,3 +23,7 @@ mono MaxQuant/bin/MaxQuantCmd.exe mqpar.xml --partial-processing=14 for Mass Rec
 
 
 R barplot example: Produces a bar graph in R.
+
+
+
+ExtractASAFromPDBs.py : Extracts Solvent Accessibility from PDB data.
