@@ -4,7 +4,7 @@ from Bio.PDB import PDBParser
 from Bio.PDB.DSSP import DSSP
 import os
 
-directory = '/home/aryeh/pdb/unzipped'
+directory = '/home/aryeh/pdb/unzipped' # Change to your respective directory of PDB *.ent files.
 
 # Parse PDB File
 p = PDBParser()
