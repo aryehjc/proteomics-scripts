@@ -30,3 +30,5 @@ ExtractASAFromPDBs.py : Extracts Solvent Accessibility from PDB data.
 
 
 GlycanMassCalculator.py : Calculates Mass of N-Glycan.
+
+3/5/2024 - Align_Script.py, delta2fasta.py and rubyscript.rb added. Run them in that order to obtain CSVs FASTAs of alignments between 1 reference and multiple genome assemblies, to run in Locate-Insertion-Regions (written by myself)
