@@ -22,3 +22,5 @@ while IFS= read -r accession; do
 done < mycobacterium_accession_numbers.txt
 
 echo "Genome download complete."
+
+#see https://unix.stackexchange.com/questions/682748/why-is-this-while-loop-exiting-after-the-first-iteration
