@@ -5,8 +5,8 @@ with Extract_Accession.py, Download_Accession, used with mycobacterium_accession
 after that
 
 
-cat downloaded_genomes/*.fasta > combined_genomes.fasta
-makeblastdb -in combined_genomes.fasta -dbtype nucl -out downloaded_genomes/db
+cat downloaded_genomes/*.fasta > combined_genomes.fasta </n>
+makeblastdb -in combined_genomes.fasta -dbtype nucl -out downloaded_genomes/db</n>
 blastn -query genome_A.fasta -db downloaded_genomes/db -out results.txt
 
 
