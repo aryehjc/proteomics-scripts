@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Create the 'downloaded_genomes' folder if it doesn't already exist
+mkdir -p downloaded_genomes
+
+# Read accession numbers from the file
+while IFS= read -r accession; do
+    # Append .1 to the accession number
+    accession_with_1="$accession.1"
+    
+    echo "Downloading genome for accession: $accession_with_1"
+    
+    # Use esearch and efetch to fetch the genome in FASTA format
+    # Redirect input to /dev/null to avoid 'stdin' issues
+    esearch -db nucleotide -query "$accession_with_1" < /dev/null | efetch -format fasta > "downloaded_genomes/$accession_with_1.fasta"
+    
+    if [ $? -eq 0 ]; then
+        echo "Successfully downloaded genome for $accession_with_1."
+    else
+        echo "Error downloading genome for $accession_with_1."
+    fi
+done < mycobacterium_accession_numbers.txt
+
+echo "Genome download complete."
