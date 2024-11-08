@@ -10,6 +10,7 @@ after that
 3) blastn -query your_query.fasta -db downloaded_genomes/db -out results.txt -max_target_seqs 5 -outfmt 6
 4) above for my 2 phages 
 
+for Download_accession and future scripts where entrez reads line by line: https://unix.stackexchange.com/questions/682748/why-is-this-while-loop-exiting-after-the-first-iteration --> important!
 
 Antibody CDR Finders: Finds Light Chain and Heavy Chain sequences (in FASTA format) according to Kabat and Chothia rules for antibody sequence numbering.
 Please note that Light Chain CDR3 finder and Heavy Chain CDR3 finder are both only 99% accurate, I have included a method for 100% accuracy within the lightchainCDR3finder script and heavychainCDR3finder1 script, making use of grep and GNU Parallel to amend the inaccurate sequence strings.
