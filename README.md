@@ -1,5 +1,7 @@
 # aryeh
-Creating scripts to optimize proteomics workflows. Updated Jul 10 2023.
+Creating scripts to optimize proteomics workflows. Updated Nov 8 2024
+with Extract_Accession.py
+
 
 Antibody CDR Finders: Finds Light Chain and Heavy Chain sequences (in FASTA format) according to Kabat and Chothia rules for antibody sequence numbering.
 Please note that Light Chain CDR3 finder and Heavy Chain CDR3 finder are both only 99% accurate, I have included a method for 100% accuracy within the lightchainCDR3finder script and heavychainCDR3finder1 script, making use of grep and GNU Parallel to amend the inaccurate sequence strings.
