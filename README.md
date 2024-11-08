@@ -7,7 +7,8 @@ after that
 
 1) cat downloaded_genomes/*.fasta > combined_genomes.fasta 
 2) makeblastdb -in combined_genomes.fasta -dbtype nucl -out downloaded_genomes/db
-3) blastn -query genome_A.fasta -db downloaded_genomes/db -out results.txt
+3) blastn -query your_query.fasta -db downloaded_genomes/db -out results.txt -max_target_seqs 5 -outfmt 6
+4) above for my 2 phages 
 
 
 Antibody CDR Finders: Finds Light Chain and Heavy Chain sequences (in FASTA format) according to Kabat and Chothia rules for antibody sequence numbering.
