@@ -2,6 +2,13 @@
 Creating scripts to optimize proteomics workflows. Updated Nov 8 2024
 with Extract_Accession.py, Download_Accession, used with mycobacterium_accession_numbers.txt
 
+after that
+
+
+cat downloaded_genomes/*.fasta > combined_genomes.fasta
+makeblastdb -in combined_genomes.fasta -dbtype nucl -out downloaded_genomes/db
+blastn -query genome_A.fasta -db downloaded_genomes/db -out results.txt
+
 
 Antibody CDR Finders: Finds Light Chain and Heavy Chain sequences (in FASTA format) according to Kabat and Chothia rules for antibody sequence numbering.
 Please note that Light Chain CDR3 finder and Heavy Chain CDR3 finder are both only 99% accurate, I have included a method for 100% accuracy within the lightchainCDR3finder script and heavychainCDR3finder1 script, making use of grep and GNU Parallel to amend the inaccurate sequence strings.
