@@ -1,6 +1,6 @@
 # aryeh
 Creating scripts to optimize proteomics workflows. Updated Nov 8 2024
-with Extract_Accession.py
+with Extract_Accession.py, Download_Accession
 
 
 Antibody CDR Finders: Finds Light Chain and Heavy Chain sequences (in FASTA format) according to Kabat and Chothia rules for antibody sequence numbering.
